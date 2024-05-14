@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Score
+{% endblock %}
+
+{% block main %}
+<center>
+<div class="card text-bg-primary mb-3" style="max-width: 30rem;">
+    <div class="card-body">
+      <p class="card-text"><h3>Quiz completed and Submitted successfully!.</h3></p>
+    </div>
+  </div>
+  <div class="card bg-primary-subtle text-bg-info mb-3" style="max-width: 30rem;">
+    <div class="card-header"><h3>Score: {{ score }} / {{ total_q }}</h3></div>
+    <div class="card-body">
+      <p class="card-text">
+        <h5>
+            <ul class="list-group">
+                <li class="list-group-item">Correct attempts     : {{ c_questions }}</li>
+                <li class="list-group-item">Incorrect attempts   : {{ total_q - c_questions - u_questions }}</li>
+                <li class="list-group-item">Unanswered questions : {{ u_questions }}</li>
+                <li class="list-group-item">Time taken           : {{ time }}</li>
+              </ul>
+      </h5>
+    </p>
+    </div>
+  </div>
+
+  <a href="/" class="btn btn-outline-primary">Back to home</a>
+</center>
+{% endblock %}

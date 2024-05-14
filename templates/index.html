@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <form action="/"  method="POST">
+        <center>
+          <img src="./static/images/homepage2.png" class="card-img-top" alt="Quiz" style="float:right; width:542px; height:542px;">
+          <br>
+          <br>
+          <br>
+          <br>
+            <div class="card" style="width: 30rem;">
+
+                <div class="card-body">
+                  <h5 class="card-title">Home Page</h5>
+                  <p class="card-text">Are you ready for a challenge? Or do you want to set a challenge ? Select your option:</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <button class="btn btn-primary" type="submit" name="take">Take Quiz</button>
+                  </li>
+                  <li class="list-group-item">
+                    <button class="btn btn-primary" type="submit" name="make">Make Quiz</button>
+                  </li>
+                  <li class="list-group-item">
+                    <button class="btn btn-primary" type="submit" name="random">Attempt a random quiz</button>
+                  </li>
+                </ul>
+            </div>
+    </center>
+    </form>
+{% endblock %}
